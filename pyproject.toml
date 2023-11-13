@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "qa-proj"
+version = "0.1.0"
+description = ""
+authors = ["egregiouss <egorushka645258@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+isort = "^5.12.0"
+black = "^23.10.1"
+flake8 = "^6.1.0"
+pyproject-flake8 = "^6.1.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 79
+target_version = ["py310"]
+
+[tool.flake8]
+max-line-length = 79
+extend-ignore = ["E203"]
+max-complexity = 10
+exclude = ".venv"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
